@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-<h1 align="center">UCSDrive! Autonomous Campus Rideshare</h1>
+<h1 align="center">RoboGuard! Autonomous Security Guard</h1>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -10,7 +10,7 @@
   </a>
 <h3>MAE148 Final Project</h3>
 <p>
-Team 4 Winter 2024
+Team 2 SS02 2024
 </p>
 
 ![image](images/7C66CA64-C422-4535-9721-F523EA8FAC5B.jpeg)
@@ -65,21 +65,20 @@ Team 4 Winter 2024
 ## Team Members
 
 <div align="center">
-    <p align = "center">Kiersten, Jacob, Joe, Damien</p>
+    <p align = "center">Matthew Huntley, Donovan Sanders, Conor Norris</p>
 </div>
 
 <h4>Team Member Major and Class </h4>
 <ul>
-  <li>Kiersten - Mechanical Engineering, Ctrls & Robotics (MC34) - Class of 2025</li>
-  <li>Jacob - Electrical Engineering (EC27) - Class of 2007</li>
-  <li>Joe - Mechanical Engineering, Ctrls & Robotics (MC34) - Class of 2025</li>
-  <li>Damien - Mechanical Engineering (MC25) - Class of 2026</li>
+  <li>Matt - Electrical Engineering, Computer System Design - Class of 2025</li>
+  <li>Donovan - Computer Engineering - Class of 2023</li>
+  <li>Conor - Mechanical Engineering, Ctrls & Robotics - Class of 2024</li>
 </ul>
 
 <!-- Final Project -->
 ## Final Project
 
-Our project goal was to develop a prototype of an a self-driving campus rideshare service exclusively for UCSD students that utilizes facial recognition as an extra element of safety and security for students. We aimed to develop ROS2 packages that would run in conjunction with the UCSD Robocar framework, programming our car to effectively perform controlled tasks while driving autonomously.
+Our project goal was to develop a prototype of an autonomous security guard that patrols around a chosen perimeter and detects any people in its path. Then it checks to see if the visitor's face is on the preauthorized guest list and takes action against them if not. We developed our own ROS2 packages as well as integrating the lane detection package that came with the Robocar framework, allowing our vehicle to perform multiple complex tasks simultaneously. 
 
 <!-- Original Goals -->
 ### Original Goals
@@ -106,6 +105,7 @@ Our project goal was to develop a prototype of an a self-driving campus rideshar
 - LiDAR
   - A package for utilizing mounted LiDAR LD06 for object detection as a safety measurement for collision avoidance
     - This should launch as a submodule as part of the overall Robocar package that runs in the background for emergency stop capabilities
+- 
    
 <!-- End Results -->
 ### Goals We Met
@@ -180,21 +180,20 @@ For our early quarter course deliverables we used DonkeyCar to train a car in dr
 
 <!-- Authors -->
 ## Authors
-  - [@kiers-neely](https://github.com/kiers-neely)  
+  - [mahuntley](https://github.com/mahuntley)  
 
 <!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-*Thank you to my teammates, Professor Jack Silberman, and our incredible TA Arjun Naageshwaran for an amazing Winter 2024 class!*
+*Thanks to Eric, Alex, and Professor Silberman*
 
 <!-- CONTACT -->
 ## Contact
 
-* Kiersten | kneely@ucsd.edu
-* Jacob | jacoberobison@gmail.com 
-* Joe | hjjeong@ucsd.edu
-* Damien | dcuara@ucsd.edu
+* Matt | mhuntley@ucsd.edu
+* Conor | cpnorris@ucsd.edu 
+* Donovan | dsanders@ucsd.edu
 
 

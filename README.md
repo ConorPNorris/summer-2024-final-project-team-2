@@ -65,7 +65,7 @@ Team 2 SS02 2024
 ## Team Members
 
 <div align="center">
-    <img src="images\group_photo.png" alt="Logo" width="400" height="100">
+    <img src="images\group_photo.png"
     <p align = "center">Matthew Huntley, Donovan Sanders, Conor Norris</p>
 </div>
 

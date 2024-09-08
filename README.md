@@ -124,8 +124,8 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 
 ### Our Hopes and Dreams
 #### Stretch Goal 1
-- Complete package integration with ROS
-  - We successfully trained our car in several different paths using GPS PointOneNav in DonkeyCar and storing the paths as `.csv` files
+- Following people when detected
+  - Didn't have enough time to implement 
   - Unfortunately we didn't have enough time to ROS-ify the Donkey GPS framework to run them from within our ROS/Robocar modules
 
 #### Stretch Goal 2
@@ -135,9 +135,9 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 
 ### Final Project Documentation
 
-* [Final Project Proposal](https://docs.google.com/presentation/d/199oVWJiOSEHAjcmizN8rejuzU7rHNCNl4qY55uGqgxQ/edit?usp=sharing)
-* [Progress Update 2/29](https://github.com/kiers-neely/ucsd-mae-148-team-4/files/14469441/mae148-slides-update.pdf)
-* [Progress Update 3/7](https://github.com/kiers-neely/ucsd-mae-148-team-4/files/14547470/mae148-slides-update.2.pdf)
+* [Final Project Proposal](https://docs.google.com/presentation/d/16qUQfX1MIP-nKk3mGd-FVhuW9kBISMMb51jPM2vEShc/edit?usp=sharing)
+* [Update Presentation](https://docs.google.com/presentation/d/1XAe-p0AtVESGOgnL7_4Y8I-bLYzD0H-fxcK1hfjJbZo/edit?usp=sharing)
+* [Final Presentation](https://docs.google.com/presentation/d/14qgWDKYyoA284vqveSCneuvcSrip2JctvzqzZFwIgrg/edit?usp=sharing)
 
 <!-- Early Quarter -->
 ## Robot Design
@@ -158,8 +158,8 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 #### Open Source Parts
 | Part | CAD Model | Source |
 |------|--------|-----------|
-| Jetson Nano Case | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/6770d099-0e2e-4f8d-8072-991f1b72971f" width="400" height="300" /> | [Thingiverse](https://www.thingiverse.com/thing:3778338) |
-| Oak-D Lite Case | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/bcc64c60-d67c-47af-b0cb-f46ac7b8a4c1" width="400" height="300" /> | [Thingiverse](https://www.thingiverse.com/thing:533649) |
+| Jetson Nano Case | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/6770d099-0e2e-4f8d-8072-991f1b72971f" width="400" height="300" /> | [Printables](https://www.printables.com/model/1420-nvidia-jetson-nano-case-nanomesh-mini/files) |
+
 
 
 ### Electronic Hardware
@@ -180,7 +180,7 @@ For our early quarter course deliverables we used DonkeyCar to train a car in dr
 
 <!-- Authors -->
 ## Authors
-  - [mahuntley](https://github.com/mahuntley)  
+  - [mahuntley](https://github.com/)  
 
 <!-- Badges -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -83,58 +83,29 @@ Our project goal was to develop a prototype of an autonomous security guard that
 
 <!-- Original Goals -->
 ### Original Goals
-- Ride Request
-  - When launching this node, the user will be prompted to define 4 variables
-    - `first_name`
-    - `last_name` 
-    - `pickup_location` 
-    - `dropoff_location` 
-  - This "ride-request" node will then publish these details to a topic to be accessed by additional nodes to determine the robot's subsequent actions
-- Custom User Interfaces
-  - This package defines custom interfaces for the parameters entered by the user
-  - Stores the user input data under predefined values for our nodes to access and compare, i.e. `identiifed_face` and `first_name` of ride request
-- Face Recognition
-  - Facial recognition and verification nodes that will be subscribed to the "Name" message given by the user and publish to a new topic
-    - Upon arriving at the pickup point, this module will deploy facial recognition using open-source Python libraries (`face_recognition, cv2, dlib`) 
-    - The service will initiate a live webcam stream through a mounted Oak-D Lite and attempt to identify the student
-    - If the student's identity is correctly verified as the individual who requested the ride, the navigation to dropoff will be authorized
-    - If the identified student does not match the name given in the ride request, the car will cancel pickup and return to base
-- GPS navigation
-  - A package dedicated to extracting the pickup and dropoff locations, which will be converted to their corresponding `.csv` path datasets and used in mapping the route and navigating the path
-    - Subscribes to the `pickup` and `dropoff` location topics and matches the input to a saved path such as `ebu2-to-ebu1.csv`
-    - Client/Action server node structure so the driving process happens one time as a service, unlike the publisher nodes
-- LiDAR
-  - A package for utilizing mounted LiDAR LD06 for object detection as a safety measurement for collision avoidance
-    - This should launch as a submodule as part of the overall Robocar package that runs in the background for emergency stop capabilities
-- 
+- Set and follow path given patrol path 
+- If a person is recognized while on the patrol path, would it will drive to the person and command them to show their face
+- The user's face will be checked against a facial recognition whitelist. If they are not on the approved list, an alarm is set off. Also, if they do not show their face to the robot within a grace period the alarm is set off.
+
    
 <!-- End Results -->
 ### Goals We Met
-- [`ride_request_publisher.py`](src/ride_request_pkg/ride_request_pkg/ride_request_publisher.py): ride request node
-- [`user_input_interfaces`](src/user_input_interfaces/msg): custom interface definitions
-  - [`RideRequest.msg`](src/user_input_interfaces/msg/RideRequest.msg)
-  - [`RideMatch.msg`](src/user_input_interfaces/msg/RideMatch.msg)
-- [`face_rec_pkg`](src/face_rec_pkg/face_rec_pkg): face recognition package
-  - [`face_publisher.py`](src/face_rec_pkg/face_rec_pkg/face_publisher.py): face recognition node for publishing identified name and video stream
-  - [`verification_service.py`](src/face_rec_pkg/face_rec_pkg/verification_service.py): identity verification node
-  - GPS Navigation Training: DonkeyCar framework
+- Robocar Lane Guidance integration with a new pause service using SetBool Service type to follow yellow line path
+- Custom Roboflow model to recognize humans as well as three individuals which are authorized and unauthorized running on Oak-D lite
+- Roboflow ROS2 node with detection logic 
+- Custom audio_player topic with subscriber node
+- Using Two Oak-D Cameras to run two different machine learning models: one for Lane Detection and Following and another for Person identification. 
 
-See [`README`](src/README.md) section in our `src` directory for breakdown of how our packages run together
-
-See [`README`](docker/README.md) section in our `docker` directory for breakdown of how to run the Docker container for our program with all dependencies built into the image
 
 ### Our Hopes and Dreams
 #### Stretch Goal 1
-- Following people when detected
-  - Didn't have enough time to implement 
-  - Unfortunately we didn't have enough time to ROS-ify the Donkey GPS framework to run them from within our ROS/Robocar modules
+- Firing Nerf gun at people after unsuccessful identity verification 
+  - We were unable to get access to a powerful enough servo until the day of presentation, but otherwise accomplished this 
 
 #### Stretch Goal 2
-- LiDAR
-  - If our car is driving autonomously with GPS only, we would definitely activate the LiDAR to incorporate an emergency stop
-  - Object detection for collision avoidance on while driving on the pretrained GPS paths
+- Follow unauthorized individuals by publishing to /cmd_vel
+  - We didn't have enough time to implement person following and instead it drives on the path while patrolling then stops when identifying and resumes it's patrol path after. 
 
-### Final Project Documentation
 
 * [Final Project Proposal](https://docs.google.com/presentation/d/16qUQfX1MIP-nKk3mGd-FVhuW9kBISMMb51jPM2vEShc/edit?usp=sharing)
 * [Update Presentation](https://docs.google.com/presentation/d/1XAe-p0AtVESGOgnL7_4Y8I-bLYzD0H-fxcK1hfjJbZo/edit?usp=sharing)
@@ -179,13 +150,6 @@ The base image pulled from Docker Hub for our project development contained the 
 
 #### DonkeyCar AI
 For our early quarter course deliverables we used DonkeyCar to train a car in driving autonomous laps around a track in a simulated environment. We used Deep Learning to record visual data of driving on a simulated track and trained the car with the data to then race on a remote server. This helped us to prepare for training our physical car on an outdoor track with computer vision.
-
-<!-- Authors -->
-## Authors
-  - [mahuntley](https://github.com/)  
-
-<!-- Badges -->
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments

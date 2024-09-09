@@ -145,15 +145,17 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 
 ### CAD Parts
 #### Final Assembly
-<img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/aa99560c-a7ff-4ca0-b913-24ac75bb6eec" width="700" height="500" />
+<img src="images/full_assembly.png" width="700" height="500" />
 
 #### Custom Designed Parts
-| Part | CAD Model | Designer |
-|------|--------------|------------|
-| Front Camera and LiDAR Mount | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/03902430-3625-4b19-ae1d-3ddaa344aa6a" width="300" height="300" /> | Kiersten
-| Side Camera and GNSS Puck Mount | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/ce443b16-9706-402e-be97-a78447cd391f" width="300" height="400" /> | Kiersten
-| Acrylic Base | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/2b4e5f76-f76d-4184-8922-512b867e38bc" width="300" height="300" /> | Damien
-| Side Paneling | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/d4d178f0-1912-44ac-8c8f-8a4d6e4bb17f" width="300" height="300" /> | Damien
+| Part | CAD Model |
+|------|--------------|
+| OAKD Camera Mount | <img src="images/oakd_camera_mount.png" width="300" height="300" /> 
+| OAKD Articulating Arm | <img src="images/articulating_oakd_arm.png" width="300" height="400" /> 
+| GPS Lidar Mount | <img src="images/gps_lidar_mount.png" width="300" height="300" /> 
+| Nerf Gun Mount | <img src="images/nerf_gun_mount.png" width="300" height="300" />
+| Perforated Plate | <img src="images/perforated_plate.png" width="300" height="300" /> 
+
 
 
 #### Open Source Parts

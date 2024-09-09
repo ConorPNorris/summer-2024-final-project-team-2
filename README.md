@@ -13,7 +13,7 @@
 Team 2 SS02 2024
 </p>
 <p>
-<strong>:warning: We are currently missing some ROS2 files uploaded because we forgot to pull files before diassembling robot. Page will be updated with finalized files September 16
+<strong>:warning: The added ROS2 files may not be the latest version we ran on our final project. These are from my laptop but don't show the final changes we made directly from the docker container. The files will be updated when we get access to a Jetson again. 
 </strong>
 </p>
 
@@ -52,13 +52,12 @@ Team 2 SS02 2024
         <li><a href="#electronic-hardware">Electronic Hardware</a></li>
         <li><a href="#software">Software</a></li>
           <ul>
-            <li><a href="#embedded-systems">Embedded Systems</a></li>
-            <li><a href="#ros2">ROS2</a></li>
-            <li><a href="#donkeycar-ai">DonkeyCar AI</a></li>
+            <li><a href="#embedded-linux">Embedded Linux</a></li>
+            <li><a href="#roboflow">Roboflow</a></li>
+            <li><a href="#ros2">Docker and ROS2 Implementation</a></li>
           </ul>
       </ul>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#authors">Authors</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>

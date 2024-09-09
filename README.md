@@ -12,6 +12,10 @@
 <p>
 Team 2 SS02 2024
 </p>
+<p>
+<strong>:warning: We are currently missing some ROS2 files uploaded because we forgot to pull files before diassembling robot. Page will be updated with finalized files September 16
+</strong>
+</p>
 
 ![image](images/robot_picture.png)
 </div>

@@ -152,6 +152,7 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 |------|--------------|
 | OAKD Camera Mount | <img src="images/oakd_camera_mount.png" width="300" height="300" /> 
 | OAKD Articulating Arm | <img src="images/articulating_oakd_arm.png" width="300" height="400" /> 
+| OAKD Plate Mount | <img src="images/oakd_plate_mount.png" width="300" height="400" /> 
 | GPS Lidar Mount | <img src="images/gps_lidar_mount.png" width="300" height="300" /> 
 | Nerf Gun Mount | <img src="images/nerf_gun_mount.png" width="300" height="300" />
 | Perforated Plate | <img src="images/perforated_plate.png" width="300" height="300" /> 
@@ -159,16 +160,14 @@ See [`README`](docker/README.md) section in our `docker` directory for breakdown
 
 
 #### Open Source Parts
-| Part | CAD Model | Source |
-|------|--------|-----------|
-| Jetson Nano Case | <img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/6770d099-0e2e-4f8d-8072-991f1b72971f" width="400" height="300" /> | [Printables](https://www.printables.com/model/1420-nvidia-jetson-nano-case-nanomesh-mini/files) |
-
-
+| Part | CAD Model |
+|------|--------|
+| Jetson Nano Case | <img src="images/jetson_case.png" width="400" height="300" /> 
 
 ### Electronic Hardware
 Below is a circuit diagram of the electronic hardware setup for the car.
 
-<img src="https://github.com/kiers-neely/ucsd-mae-148-team-4/assets/161119406/6f7501ee-382a-4590-9c0a-f8ce738efec3" width="800" height="400" />
+<img src="images/wiring_diagram.png" width="800" height="400" />
 
 
 ### Software

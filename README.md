@@ -143,13 +143,20 @@ Below is a circuit diagram of the electronic hardware setup for the car.
 
 ### Software
 #### Embedded Systems
-To program the Jetson Nano, we accessed the Jetson Nano through remote SSH connection to an embedded Linux system onboard and ran a docker container with all the necessary dependencies to run our packages. This allowed us to eliminate any incompatibility issues and to maximize resource efficiency on the Jetson. We used a variation of virtualization softwares including VMWare and WSL2 to build, test and launch our programs. 
+Embedded Linux: To use the Jetson nano, we had to connect via ssh so that we could run, upload, and program our robot. The provided Docker container from Dominic Nightengale had ROS2 installed so that we could easily start immediate development on our robot.
 
-#### ROS2
-The base image pulled from Docker Hub for our project development contained the UCSD Robocar module ran on a Linux OS (Ubuntu 20.04). The Robocar module, consisting of several submodules using ROS/ROS2, was originally developed by Dominic Nightingale, a UC San Diego graduate student. His framework was built for use with a wide variety of sensors and actuation methods on scale autonomous vehicles, providing the ability to easily control a car-like robot while enabling the robot to simultaneously perform autonomous tasks.
+#### [Roboflow](https://universe.roboflow.com/basketballsmartref/mae148-human-identification/model/5	)
+- Implemented Custom Roboflow 3.0 Object Detection Model to detect “Human-person, Conor, Donovan, Matt” which were used to create authorized and unauthorized users for the model to detect. Our model runs “on the edge of the edge” through the use of the Oak-D Lite and Nvidia Jetson Nano.
+- Created basic Image Collection Script for the Oak-D lite to take training images for our model as this was how our robot would “see” in the real environment.
 
-#### DonkeyCar AI
-For our early quarter course deliverables we used DonkeyCar to train a car in driving autonomous laps around a track in a simulated environment. We used Deep Learning to record visual data of driving on a simulated track and trained the car with the data to then race on a remote server. This helped us to prepare for training our physical car on an outdoor track with computer vision.
+#### Docker and ROS2 Implementation:
+The ROS2 Docker Image provided by Dominic Nightengale has several ROS2 packages that are already implemented and testable on our robot. 
+- Used Robocar Lane Navigation Package 2 which makes use of the Lane Guidance node to follow a yellow line. Using this package and integrating a pause service on top of the provided code as well logic for Roboflow Model Detection and Custom Audio Subscriber Node.
+- Created Custom Roboflow Package to use our model for person identification and used detections to publish to other ROS2 nodes.
+
+### Challenges
+We were initially hoping to use a custom Yolo V8 which ran locally using the Oak-D lite, however, even after much trial and error, we could not get it to run due to an invalid architecture error. We tried several different versions of our model such as the blob and onnx files, however, even after installing Ultralytics to the Docker image (to use our Yolo model), the model would still not run. Went ended up working and being faster in the end was to use the Roboflow 3.0 Object Detection Model available on the website which ported the correct version of our custom Roboflow model over to the Oak-D lite. 
+
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
